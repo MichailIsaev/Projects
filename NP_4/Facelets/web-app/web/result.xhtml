@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+    <h:head>
+        <h:outputStylesheet name="css/styles.css"/>
+    </h:head>
+    <h:body styleClass="body">
+        <h:form styleClass="form">
+            <p>
+                <h:outputLabel for="firstArg" value="Первый аргумент : "/>
+                <h:outputLabel id="firstArg" value="#{multiplyBean.firstArgument}"/>
+            </p>
+            <p>
+                <h:outputLabel for="secondArg" value="Второй аргумент : "/>
+                <h:outputLabel id="secondArg" value="#{multiplyBean.secondArgument}"/>
+            </p>
+            <p>
+                <h:outputLabel for="result" value="Результат : "/>
+                <h:outputLabel id="result" value="#{multiplyBean.result}"/>
+            </p>
+            <p>
+                <h:commandLink value="Обратно" action="index" styleClass="hover"/>
+            </p>
+            <p>
+                <h:commandLink value="Посмотреть данные в XML" action="#{multiplyBean.showDataByXML}"/>
+            </p>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

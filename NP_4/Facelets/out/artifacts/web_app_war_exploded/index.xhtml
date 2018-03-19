@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:o="http://omnifaces.org/ui">
+
+<f:view>
+    <h:head>
+        <title>Хэй</title>
+        <h:outputStylesheet name="css/styles.css"/>
+    </h:head>
+    <h:body styleClass="body">
+        <div class="circles">
+            <div class="circle"/>
+            <div class="circle"/>
+            <div class="circle"/>
+            <div class="circle"/>
+        </div>
+        <h:form styleClass="form">
+            <p>
+                <h:outputLabel for="firstArg" value="Первый аргумент : "/>
+                <h:inputText id="firstArg"
+                             value="#{multiplyBean.firstArgument}"
+                             required="true"
+                             styleClass="#{not component.valid ? 'invalid' : 'none'}">
+                    <f:converter converterId="converters.CustomNumberConverter" for="firstArg"/>
+                    <f:validator validatorId="validators.NumbersValidator"/>
+                    <f:ajax event="blur" render="first_error"/>
+                </h:inputText>
+            </p>
+            <h:message for="firstArg" style="color:white"/>
+            <p>
+                <h:outputLabel for="secondArg" value="Второй аргумент : "/>
+                <h:inputText id="secondArg"
+                             required="true"
+                             value="#{multiplyBean.secondArgument}"
+                             styleClass="#{not component.valid ? 'invalid' : 'none'}">
+                    <f:converter converterId="converters.CustomNumberConverter" for="secondArg"/>
+                    <f:validator validatorId="validators.NumbersValidator"/>
+                </h:inputText>
+            </p>
+            <h:message for="secondArg" style="color:white"/>
+            <p>
+                <h:commandButton action="#{multiplyBean.multiply}" value="Результат"/>
+            </p>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

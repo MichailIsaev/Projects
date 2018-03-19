@@ -1,0 +1,99 @@
+
+a:hover {
+  color: #880000;
+  text-decoration: none;
+}
+
+:invalid {
+  color: #880000;
+  text-decoration: line-through;
+}
+
+H1 {
+  font-family: 'Mina', sans-serif;
+  text-align: center;
+}
+
+H3 {
+  text-align: center;
+}
+
+body {
+  background: url(font.jpg);
+  background-size: cover;
+}
+
+form {
+  background-color: indianred;
+  text-align: center;
+  position: absolute;
+  top: 200px;
+  left: 45%;
+  max-height: 400px;
+  max-width: 450px;
+}
+
+button {
+  border-radius: 5px;
+  color: silver;
+}
+
+div.circle {
+  border-radius: 50%;
+  background: #fff;
+  width: 13px;
+  height: 13px;
+  display: inline-flex;
+  margin-top: 40%;
+  top: 400px;
+}
+
+div.circle:first-child {
+  animation: upload 0.8s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+  background-color: #4285f4;
+  margin-right: 6px;
+}
+
+div.circle:nth-child(2) {
+  animation: upload 1.3s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+  background-color: #34a853;
+  margin-right: 3px;
+}
+
+div.circle:nth-child(3) {
+  animation: upload 1.1s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+  background-color: #fbbc05;
+  margin-left: 3px;
+}
+
+div.circle:last-child {
+  animation: upload 1.45s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+  background-color: #ea4335;
+  margin-left: 6px;
+}
+
+div.circles {
+  position: absolute;
+  top: 400px;
+  left: 47%;
+}
+
+@keyframes body-opacity-change {
+  from {
+    opacity: 0;
+    background-color: transparent;
+  }
+  to {
+    opacity: 1;
+    background-color: #1b1c2c;
+  }
+}
+
+@keyframes upload {
+  from {
+    transform: translateY(35px);
+  }
+  to {
+    transform: translateY(-35px);
+  }
+}

@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="web-app:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_app_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web-app" />
+          <element id="module-output" name="SessionMultiplier" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.faces:javax.faces-api:2.1" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+          <element id="library" level="project" name="ejb-3.2" />
+        </element>
+      </element>
+      <element id="library" level="project" name="Mojarra-2.2.1" />
+      <element id="javaee-facet-resources" facet="web-app/web/Web" />
+      <element id="javaee-facet-resources" facet="SessionMultiplier/ejb/EJB" />
+      <element id="artifact" artifact-name="SessionMultiplier:ejb exploded" />
+    </root>
+  </artifact>
+</component>
